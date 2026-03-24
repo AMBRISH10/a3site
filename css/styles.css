@@ -1995,7 +1995,7 @@ img.a3-logo {
 }
 
 .footer-link {
-  display: inline-block !important;
+  display: block !important;
   color: #555 !important;
   font-size: 14px !important;
   padding: 5px 0 !important;
