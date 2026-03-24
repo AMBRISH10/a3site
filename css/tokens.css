@@ -1,0 +1,35 @@
+/* ═══════════════════════════════════════════════
+   a3outsourcing — Design Tokens
+   ═══════════════════════════════════════════════ */
+:root {
+  /* Brand */
+  --brand-red: #D92020;
+  --brand-red-bright: #F04040;
+  --brand-red-glow: rgba(217, 32, 32, 0.14);
+  --brand-red-subtle: rgba(217, 32, 32, 0.06);
+  --brand-red-border: rgba(217, 32, 32, 0.18);
+
+  /* Neutrals */
+  --neutral-dim: #888890;
+  --bg-dark: #F4F4F5;      /* Primary page background */
+  --bg-dark-2: #EAEAEB;
+  --bg-dark-3: #E2E2E3;
+
+  /* Glass — frosted white cards */
+  --glass: rgba(255, 255, 255, 0.75);
+  --glass-hover: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  /* Text */
+  --text-primary: #3C3C3F;
+  --text-secondary: #6E6E73;
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Fonts */
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}

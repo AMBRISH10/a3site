@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — a3outsourcing</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;width:100%;height:3px;z-index:9999;background:rgba(0,0,0,0.05)">
+  <div id="scroll-progress" style="height:100%;width:0%;background:linear-gradient(90deg,var(--brand-red),var(--brand-red-bright));transition:width .08s linear;box-shadow:0 0 20px var(--brand-red-glow)"></div>
+</div>
+<canvas id="particle-canvas" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1"></canvas>
+<div id="navbar-root"></div>
+<div class="morph-blob-2" style="top:-10%;left:-10%;width:45vw;height:45vw;max-width:500px;max-height:500px;z-index:0"></div>
+
+<main style="position:relative;z-index:2">
+
+  <!-- Hero -->
+  <div class="page-hero" style="min-height:42vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:150px 24px 60px;position:relative">
+
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(217,32,32,.05),transparent 50%)"></div>
+
+    <!-- Floating image cards -->
+    <div class="hero-float-card" style="position:absolute;top:38%;left:18%;animation:icon-float 5s ease-in-out infinite;z-index:1">
+      <div style="width:130px;border-radius:16px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);background:#fff">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=260&q=80&auto=format&fit=crop&crop=center" alt="Support team" style="width:100%;height:80px;object-fit:cover;display:block">
+        <div style="padding:8px 10px">
+          <div style="font-size:10px;font-weight:800;color:#3a6fd8;letter-spacing:1px;text-transform:uppercase;font-family:var(--font-mono)">Support</div>
+          <div style="font-size:11px;color:var(--text-secondary);margin-top:1px">Always available</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-float-card" style="position:absolute;bottom:14%;right:18%;animation:icon-float 4.5s ease-in-out 1.6s infinite;z-index:1">
+      <div style="width:130px;border-radius:16px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);background:#fff">
+        <img src="https://img.icons8.com/fluency/96/marker.png" alt="Location" style="width:40px;height:40px;object-fit:contain;">
+        <div style="padding:8px 10px">
+          <div style="font-size:10px;font-weight:800;color:#27ae60;letter-spacing:1px;text-transform:uppercase;font-family:var(--font-mono)">Chennai</div>
+          <div style="font-size:11px;color:var(--text-secondary);margin-top:1px">Tamil Nadu, IN</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-float-card" style="position:absolute;top:85%;left:27%;animation:icon-float 6s ease-in-out 2.5s infinite;z-index:1">
+      <div style="padding:10px 14px;border-radius:12px;background:#fff;box-shadow:0 8px 28px rgba(0,0,0,0.09);border:1px solid rgba(0,0,0,0.07);display:flex;align-items:center;gap:8px;white-space:nowrap">
+        <div style="width:28px;height:28px;border-radius:8px;background:var(--brand-red-subtle);border:1px solid var(--brand-red-border);display:flex;align-items:center;justify-content:center;color:var(--brand-red);flex-shrink:0"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><div style="font-size:10px;font-weight:800;color:var(--text-primary);font-family:var(--font-mono)">24hr</div><div style="font-size:10px;color:var(--text-secondary)">Response</div></div>
+      </div>
+    </div>
+    <div class="hero-float-card" style="position:absolute;top:22%;right:28%;animation:icon-float 5.5s ease-in-out 0.9s infinite;z-index:1">
+      <div style="padding:10px 14px;border-radius:12px;background:#fff;box-shadow:0 8px 28px rgba(0,0,0,0.09);border:1px solid rgba(0,0,0,0.07);display:flex;align-items:center;gap:8px;white-space:nowrap">
+        <div style="width:7px;height:7px;border-radius:50%;background:#27ae60;flex-shrink:0;box-shadow:0 0 0 3px rgba(39,174,96,0.2)"></div>
+        <div><div style="font-size:10px;font-weight:800;color:var(--text-primary);font-family:var(--font-mono)">We reply fast</div><div style="font-size:10px;color:var(--text-secondary)">info@a3outsourcing.com</div></div>
+      </div>
+    </div>
+
+    <div style="position:relative;z-index:2;animation:fadeUp .8s var(--ease-out-expo)">
+    <span class="section-tag">Get In Touch</span>
+      <h1 style="font-size:clamp(38px,7.5vw,68px);font-weight:800;font-family:var(--font-display);line-height:1.05;letter-spacing:-3px;background:linear-gradient(160deg,var(--text-primary) 10%,var(--neutral-dim) 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Contact Us</h1>
+    </div>
+  </div>
+
+  <!-- Form + Details -->
+  <div class="section">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start" class="grid-2">
+
+      <!-- Contact Form -->
+      <div class="sr-l">
+        <div class="glass-card" style="padding:40px">
+          <!-- Success State -->
+          <div id="form-success" style="display:none;text-align:center;padding:44px 0;animation:scaleUp .5s var(--ease-spring)">
+            <div style="width:76px;height:76px;border-radius:50%;background:rgba(78,205,196,.08);border:2px solid rgba(78,205,196,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 22px">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#4ECDC4" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 style="font-size:24px;font-weight:700;font-family:var(--font-display);margin-bottom:8px">Thank You!</h3>
+            <p style="color:var(--text-secondary);font-size:15px">We'll get back to you within 24 hours.</p>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" novalidate style="display:flex;flex-direction:column;gap:20px">
+            <h3 style="font-size:22px;font-weight:700;font-family:var(--font-display);margin-bottom:8px">Send us a message</h3>
+
+            <div>
+              <label class="form-label" for="name">Full Name *</label>
+              <input class="form-input" id="name" type="text" placeholder="John Doe">
+              <span class="form-error" id="err-name"></span>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" class="grid-2">
+              <div>
+                <label class="form-label" for="email">Email *</label>
+                <input class="form-input" id="email" type="email" placeholder="john@example.com">
+                <span class="form-error" id="err-email"></span>
+              </div>
+              <div>
+                <label class="form-label" for="phone">Phone *</label>
+                <input class="form-input" id="phone" type="tel" placeholder="9876543210">
+                <span class="form-error" id="err-phone"></span>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label" for="service">Service Interest *</label>
+              <select class="form-input" id="service" style="appearance:none;cursor:pointer">
+                <option value="" style="background:#111">Select a service</option>
+                <option value="Health Insurance" style="background:#111">Health Insurance</option>
+                <option value="Life Insurance" style="background:#111">Life Insurance</option>
+                <option value="Motor Insurance" style="background:#111">Motor Insurance</option>
+                <option value="Home Insurance" style="background:#111">Home Insurance</option>
+                <option value="Personal Accident Insurance" style="background:#111">Personal Accident Insurance</option>
+              </select>
+              <span class="form-error" id="err-service"></span>
+            </div>
+
+            <div>
+              <label class="form-label" for="message">Message *</label>
+              <textarea class="form-input" id="message" rows="4" placeholder="Tell us how we can help..." style="resize:vertical;min-height:100px"></textarea>
+              <span class="form-error" id="err-message"></span>
+            </div>
+
+            <label style="display:flex;align-items:flex-start;gap:11px;cursor:pointer">
+              <input id="consent" type="checkbox" style="margin-top:3px;accent-color:var(--brand-red);width:18px;height:18px">
+              <span style="font-size:13px;color:var(--text-secondary);line-height:1.55">I consent to a3outsourcing collecting and using my information to respond to this inquiry.</span>
+            </label>
+            <span class="form-error" id="err-consent"></span>
+
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:17px 32px">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Details + Map -->
+      <div class="sr-r" style="display:flex;flex-direction:column;gap:22px">
+        <div class="glass-card">
+          <h3 style="font-size:18px;font-weight:700;font-family:var(--font-display);margin-bottom:22px">Contact Details</h3>
+
+          <div style="display:flex;align-items:flex-start;gap:15px;margin-bottom:18px">
+            <div style="width:46px;height:46px;border-radius:13px;background:var(--brand-red-subtle);border:1px solid var(--brand-red-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand-red)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><div style="font-weight:600;font-size:14px;margin-bottom:2px">Address</div><span style="color:var(--text-secondary);font-size:14px">Chennai, Tamil Nadu, India</span></div>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:15px;margin-bottom:18px">
+            <div style="width:46px;height:46px;border-radius:13px;background:var(--brand-red-subtle);border:1px solid var(--brand-red-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand-red)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div><div style="font-weight:600;font-size:14px;margin-bottom:2px">Phone</div><a href="tel:8939635733" style="color:var(--text-secondary);font-size:14px">8939635733</a></div>
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:15px">
+            <div style="width:46px;height:46px;border-radius:13px;background:var(--brand-red-subtle);border:1px solid var(--brand-red-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand-red)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div><div style="font-weight:600;font-size:14px;margin-bottom:2px">Email</div><a href="mailto:info@a3outsourcing.com" style="color:var(--text-secondary);font-size:14px">info@a3outsourcing.com</a></div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="glass-card" style="padding:0;overflow:hidden">
+          <div style="padding:18px 24px 14px">
+            <h3 style="font-size:18px;font-weight:700;font-family:var(--font-display)">Find Us</h3>
+            <p style="color:var(--text-secondary);font-size:13px;margin-top:3px">Chennai, Tamil Nadu</p>
+          </div>
+          <div style="position:relative;padding-bottom:55%;overflow:hidden;border-radius:0 0 18px 18px">
+            <iframe title="a3outsourcing office location" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d80.06892554115082!3d13.047985942255792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              style="position:absolute;inset:0;width:100%;height:100%;border:none;filter:saturate(0.85) brightness(1.02)">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-root"></div>
+<button class="scroll-top-btn" id="scroll-top" aria-label="Scroll to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>injectLayout('contact');</script>
+</body>
+</html>

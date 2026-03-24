@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services — a3outsourcing</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;width:100%;height:3px;z-index:9999;background:rgba(0,0,0,0.05)">
+  <div id="scroll-progress" style="height:100%;width:0%;background:linear-gradient(90deg,var(--brand-red),var(--brand-red-bright));transition:width .08s linear;box-shadow:0 0 20px var(--brand-red-glow)"></div>
+</div>
+<canvas id="particle-canvas" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1"></canvas>
+<div id="navbar-root"></div>
+
+<main style="position:relative;z-index:2;overflow:hidden">
+  <div class="morph-blob-1" style="top:-20%;right:-15%;width:50vw;height:50vw;max-width:600px;max-height:600px;z-index:0"></div>
+
+  <!-- HERO -->
+  <div class="page-hero" style="min-height:56vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:150px 24px 80px;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(217,32,32,.06),transparent 55%)"></div>
+
+<!-- Floating image cards -->
+    <div class="hero-float-card" style="position:absolute;top:24%;left:18%;animation:icon-float 5s ease-in-out infinite;z-index:1">
+      <div style="width:128px;border-radius:16px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);background:#fff">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=256&q=80&auto=format&fit=crop&crop=center" alt="Health Insurance" style="width:100%;height:78px;object-fit:cover;display:block">
+        <div style="padding:8px 10px">
+          <div style="font-size:10px;font-weight:800;color:#D92020;letter-spacing:1px;text-transform:uppercase;font-family:var(--font-mono)">Health</div>
+          <div style="font-size:11px;color:var(--text-secondary);margin-top:1px">Cashless cover</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-float-card" style="position:absolute;bottom:15%;right:18%;animation:icon-float 4.5s ease-in-out 1.4s infinite;z-index:1">
+      <div style="width:132px;border-radius:16px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);background:#fff">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=264&q=80&auto=format&fit=crop&crop=center" alt="Motor Insurance" style="width:100%;height:78px;object-fit:cover;display:block">
+        <div style="padding:8px 10px">
+          <div style="font-size:10px;font-weight:800;color:#d4a017;letter-spacing:1px;text-transform:uppercase;font-family:var(--font-mono)">Motor</div>
+          <div style="font-size:11px;color:var(--text-secondary);margin-top:1px">Comprehensive</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-float-card" style="position:absolute;top:70%;left:20%;animation:icon-float 6s ease-in-out 2.8s infinite;z-index:1">
+      <div style="padding:10px 14px;border-radius:12px;background:#fff;box-shadow:0 8px 28px rgba(0,0,0,0.09);border:1px solid rgba(0,0,0,0.07);display:flex;align-items:center;gap:8px;white-space:nowrap">
+        <div style="font-size:18px;font-weight:800;font-family:var(--font-mono);color:#D92020;line-height:1">5K+</div>
+        <div><div style="font-size:10px;font-weight:700;color:var(--text-primary)">Claims</div><div style="font-size:10px;color:var(--text-secondary)">Settled</div></div>
+      </div>
+    </div>
+    <div class="hero-float-card" style="position:absolute;top:20%;right:24%;animation:icon-float 5s ease-in-out 1s infinite;z-index:1">
+      <div style="width:126px;border-radius:16px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);background:#fff">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=252&q=80&auto=format&fit=crop&crop=top" alt="Life Insurance" style="width:100%;height:74px;object-fit:cover;display:block">
+        <div style="padding:8px 10px">
+          <div style="font-size:10px;font-weight:800;color:#2ec4b6;letter-spacing:1px;text-transform:uppercase;font-family:var(--font-mono)">Life</div>
+          <div style="font-size:11px;color:var(--text-secondary);margin-top:1px">Family protect</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative;z-index:2;animation:fadeUp .8s var(--ease-out-expo)">
+      <span class="section-tag badge-anim">Comprehensive Coverage</span>
+      <h1 style="font-size:clamp(42px,8vw,76px);font-weight:800;font-family:var(--font-display);line-height:1.02;letter-spacing:-3px;background:linear-gradient(160deg,#2a2a2e 15%,#666668 85%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:18px 0 22px">
+        Insurance That<br><span style="background:linear-gradient(90deg,#D92020,#E8603A,#C0392B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:heading-color-cycle 5s ease-in-out infinite;background-size:300% 300%">Works for You</span>
+      </h1>
+      <p style="color:var(--text-secondary);font-size:18px;max-width:560px;margin:0 auto;line-height:1.75">Five types of insurance. One trusted partner. 17+ years of claims handled, policies matched, and families protected.</p>
+      <div style="display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap">
+        <a href="contact.html" class="btn-primary">Get a Free Quote &rarr;</a>
+        <a href="#services-list" class="btn-secondary">Explore Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="section" style="padding-top:0;padding-bottom:60px">
+    <div class="stat-strip sr">
+      <div><div class="stat-val">50K+</div><div class="stat-label">Policies Managed</div></div>
+      <div><div class="stat-val" style="background:linear-gradient(135deg,#4ECDC4,#1abc9c);-webkit-background-clip:text;-webkit-text-fill-color:transparent">5K+</div><div class="stat-label">Claims Settled</div></div>
+      <div><div class="stat-val" style="background:linear-gradient(135deg,#E8603A,#D92020);-webkit-background-clip:text;-webkit-text-fill-color:transparent">17+</div><div class="stat-label">Years Expertise</div></div>
+      <div><div class="stat-val" style="background:linear-gradient(135deg,#5B8DEF,#3a6fd8);-webkit-background-clip:text;-webkit-text-fill-color:transparent">15+</div><div class="stat-label">Insurer Partners</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICES IN FULL -->
+  <div id="services-list" class="section" style="padding-top:20px">
+
+    <!-- Health Insurance -->
+    <div class="svc-full sr">
+      <div>
+        <div class="section-img-panel" style="aspect-ratio:4/3">
+          <div class="img-frame"></div>
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=85&auto=format" alt="Health Insurance" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="svc-img-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B6B" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span style="color:#c0392b">Health Insurance</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="section-tag" style="background:rgba(217,32,32,.08);color:#D92020;border-color:rgba(217,32,32,.18)">Most Popular</span>
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-1.5px">Health Insurance</h2>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:28px">Medical emergencies don't wait for the right moment. We help you compare and purchase health plans from India's top insurers — so when the unexpected happens, your bills don't become your burden. From individual plans to family floaters, we cover it all.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px" class="grid-2">
+          <div class="svc-feature hover-bar" style="background:rgba(217,32,32,.05);border:1px solid rgba(217,32,32,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Cashless hospitalization</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(217,32,32,.05);border:1px solid rgba(217,32,32,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Pre &amp; post-hospitalization</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(217,32,32,.05);border:1px solid rgba(217,32,32,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Day care procedures</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(217,32,32,.05);border:1px solid rgba(217,32,32,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">No-claim bonus benefits</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(217,32,32,.05);border:1px solid rgba(217,32,32,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Family floater plans</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(217,32,32,.05);border:1px solid rgba(217,32,32,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Critical illness cover</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding:16px 20px;background:rgba(217,32,32,.04);border:1px solid rgba(217,32,32,.10);border-radius:14px">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D92020" stroke-width="2" class="icon-glow-cycle"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div><div style="font-size:13px;font-weight:700;color:#D92020;margin-bottom:2px">Did you know?</div><div style="font-size:13px;color:var(--text-secondary)">Over 80% of hospitalizations in India are out-of-pocket. Health insurance saves families from financial catastrophe.</div></div>
+        </div>
+        <a href="contact.html" class="btn-primary">Get Health Quote &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Life Insurance -->
+    <div class="svc-full reverse sr">
+      <div>
+        <span class="section-tag" style="background:rgba(78,205,196,.1);color:#2ec4b6;border-color:rgba(78,205,196,.2)">Long-term Protection</span>
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-1.5px">Life Insurance</h2>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:28px">Your family's financial future shouldn't be uncertain. We guide you through term plans, whole-life policies, ULIPs, and endowment plans — selecting the right coverage amount, riders, and tenure for your life goals.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px" class="grid-2">
+          <div class="svc-feature hover-bar" style="background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Term life plans</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">ULIP investments</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Endowment policies</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Tax benefits u/s 80C</span></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px">
+          <div style="padding:10px 18px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:10px;font-size:13px;font-weight:700;color:#2ec4b6">✓ LIC Approved</div>
+          <div style="padding:10px 18px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:10px;font-size:13px;font-weight:700;color:#2ec4b6">✓ HDFC &amp; ICICI Plans</div>
+          <div style="padding:10px 18px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:10px;font-size:13px;font-weight:700;color:#2ec4b6">✓ Estate Planning</div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="background:#2ec4b6;box-shadow:0 8px 36px rgba(78,205,196,0.3)">Get Life Quote &rarr;</a>
+      </div>
+      <div>
+        <div class="section-img-panel" style="aspect-ratio:4/3">
+          <div class="img-frame"></div>
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=85&auto=format" alt="Life Insurance family" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="svc-img-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2ec4b6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="color:#2ec4b6">Life Insurance</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Motor Insurance -->
+    <div class="svc-full sr">
+      <div>
+        <div class="section-img-panel" style="aspect-ratio:4/3">
+          <div class="img-frame"></div>
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900&q=85&auto=format" alt="Motor Insurance" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="svc-img-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg><span style="color:#d4a017">Motor Insurance</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="section-tag" style="background:rgba(212,160,23,.1);color:#d4a017;border-color:rgba(212,160,23,.2)">Mandatory by Law</span>
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-1.5px">Motor Insurance</h2>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:28px">From third-party liability to comprehensive coverage — we help you insure cars, bikes, and commercial vehicles. We compare add-ons, handle renewals on time, and get you back on the road fast after an accident.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px" class="grid-2">
+          <div class="svc-feature hover-bar" style="background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Comprehensive cover</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Third-party liability</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Zero depreciation add-on</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Roadside assistance</span></div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="background:#d4a017;box-shadow:0 8px 36px rgba(212,160,23,0.3)">Get Motor Quote &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Home Insurance -->
+    <div class="svc-full reverse sr">
+      <div>
+        <span class="section-tag" style="background:rgba(39,174,96,.1);color:#27ae60;border-color:rgba(39,174,96,.2)">Protect Your Property</span>
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-1.5px">Home Insurance</h2>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:28px">Your home is your biggest investment. Protect it from fire, floods, theft, and natural disasters. We help you understand valuation, structure vs contents, and navigate claims quickly so you're back home fast.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px" class="grid-2">
+          <div class="svc-feature hover-bar" style="background:rgba(39,174,96,.05);border:1px solid rgba(39,174,96,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Fire &amp; theft cover</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(39,174,96,.05);border:1px solid rgba(39,174,96,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Flood &amp; disasters</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(39,174,96,.05);border:1px solid rgba(39,174,96,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Contents coverage</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(39,174,96,.05);border:1px solid rgba(39,174,96,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Liability protection</span></div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="background:#27ae60;box-shadow:0 8px 36px rgba(39,174,96,0.3)">Get Home Quote &rarr;</a>
+      </div>
+      <div>
+        <div class="section-img-panel" style="aspect-ratio:4/3">
+          <div class="img-frame"></div>
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=900&q=85&auto=format" alt="Home Insurance" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="svc-img-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span style="color:#27ae60">Home Insurance</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Accident -->
+    <div class="svc-full sr">
+      <div>
+        <div class="section-img-panel" style="aspect-ratio:4/3">
+          <div class="img-frame"></div>
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&q=85&auto=format" alt="Personal Accident Insurance" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="svc-img-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg><span style="color:#9b59b6">Personal Accident</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="section-tag" style="background:rgba(155,89,182,.1);color:#9b59b6;border-color:rgba(155,89,182,.2)">Income Protection</span>
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-1.5px">Personal Accident Insurance</h2>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:28px">An accident can halt income for weeks or months. Our personal accident plans ensure you and your family continue to have financial support, plus medical cover and rehabilitation assistance — fast.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px" class="grid-2">
+          <div class="svc-feature hover-bar" style="background:rgba(155,89,182,.05);border:1px solid rgba(155,89,182,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Accidental death benefit</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(155,89,182,.05);border:1px solid rgba(155,89,182,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Permanent disability</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(155,89,182,.05);border:1px solid rgba(155,89,182,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Medical expense cover</span></div>
+          <div class="svc-feature hover-bar" style="background:rgba(155,89,182,.05);border:1px solid rgba(155,89,182,.12);border-radius:10px;padding:12px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="margin-left:8px;font-size:13px">Rehabilitation support</span></div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="background:#9b59b6;box-shadow:0 8px 36px rgba(155,89,182,0.3)">Get PA Quote &rarr;</a>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CUSTOMER CALLING SUPPORT — NEW SECTION
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="svc-full reverse sr" style="border-bottom:none">
+      <div>
+        <!-- Accent colour: indigo-blue #5B8DEF — distinct from all insurance sections -->
+        <span class="section-tag" style="background:rgba(91,141,239,.1);color:#3a6fd8;border-color:rgba(91,141,239,.2)">Beyond Insurance</span>
+        <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-1.5px">Call Center &amp; Marketing Services</h2>
+        <p style="font-size:16px;font-weight:600;color:#3a6fd8;margin-bottom:12px;">
+          A3 Outsourcing provides comprehensive marketing and call center support for all banking and outsourcing products.
+        </p>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;margin-bottom:28px">In addition to insurance, a3outsourcing delivers end-to-end inbound and outbound customer engagement services. Our trained calling teams work with banks, NBFCs, and financial brands to drive sales, service customers, and generate qualified leads at scale.</p>
+
+        <!-- Feature grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px" class="grid-2">
+          <div class="svc-feature hover-bar" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.12);border-radius:10px;padding:12px 14px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span style="margin-left:8px;font-size:13px">Banking product support</span>
+          </div>
+          <div class="svc-feature hover-bar" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.12);border-radius:10px;padding:12px 14px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span style="margin-left:8px;font-size:13px">Credit card sales calls</span>
+          </div>
+          <div class="svc-feature hover-bar" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.12);border-radius:10px;padding:12px 14px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span style="margin-left:8px;font-size:13px">Lead generation campaigns</span>
+          </div>
+          <div class="svc-feature hover-bar" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.12);border-radius:10px;padding:12px 14px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span style="margin-left:8px;font-size:13px">Customer retention calls</span>
+          </div>
+          <div class="svc-feature hover-bar" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.12);border-radius:10px;padding:12px 14px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span style="margin-left:8px;font-size:13px">Loan product enquiries</span>
+          </div>
+          <div class="svc-feature hover-bar" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.12);border-radius:10px;padding:12px 14px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span style="margin-left:8px;font-size:13px">After-sales follow-ups</span>
+          </div>
+        </div>
+
+        <!-- Trust chips -->
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px">
+          <div style="padding:10px 18px;background:rgba(91,141,239,.07);border:1px solid rgba(91,141,239,.16);border-radius:10px;font-size:13px;font-weight:700;color:#3a6fd8">✓ Trained Agents</div>
+          <div style="padding:10px 18px;background:rgba(91,141,239,.07);border:1px solid rgba(91,141,239,.16);border-radius:10px;font-size:13px;font-weight:700;color:#3a6fd8">✓ Tamil &amp; English</div>
+          <div style="padding:10px 18px;background:rgba(91,141,239,.07);border:1px solid rgba(91,141,239,.16);border-radius:10px;font-size:13px;font-weight:700;color:#3a6fd8">✓ BFSI Expertise</div>
+        </div>
+
+        <!-- Did you know callout -->
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding:16px 20px;background:rgba(91,141,239,.04);border:1px solid rgba(91,141,239,.10);border-radius:14px">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2" class="icon-glow-cycle"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div><div style="font-size:13px;font-weight:700;color:#3a6fd8;margin-bottom:2px">Why outsource calling?</div><div style="font-size:13px;color:var(--text-secondary)">Companies that outsource customer calling reduce cost-per-lead by up to 60% while increasing contact rates through dedicated, trained teams.</div></div>
+        </div>
+
+        <a href="contact.html" class="btn-primary" style="background:#3a6fd8;box-shadow:0 8px 36px rgba(91,141,239,0.28)">Enquire About Calling Services &rarr;</a>
+      </div>
+
+      <!-- Image side -->
+      <div>
+        <div class="section-img-panel" style="aspect-ratio:4/3">
+          <div class="img-frame"></div>
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900&q=85&auto=format" alt="Customer calling support team" loading="lazy">
+          <div class="img-overlay" style="background:linear-gradient(to top,rgba(244,244,245,0.55) 0%,transparent 45%)"></div>
+          <div class="svc-img-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="color:#3a6fd8">Calling Support</span>
+          </div>
+        </div>
+
+        <!-- Floating stat cards specific to calling -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px">
+          <div class="glass-card" style="padding:18px 20px;text-align:center">
+            <div style="font-size:26px;font-weight:800;font-family:var(--font-mono);background:linear-gradient(135deg,#5B8DEF,#3a6fd8);-webkit-background-clip:text;-webkit-text-fill-color:transparent">60%</div>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.4">Lower cost-per-lead vs in-house</div>
+          </div>
+          <div class="glass-card" style="padding:18px 20px;text-align:center">
+            <div style="font-size:26px;font-weight:800;font-family:var(--font-mono);background:linear-gradient(135deg,#5B8DEF,#3a6fd8);-webkit-background-clip:text;-webkit-text-fill-color:transparent">3x</div>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.4">Higher contact rate with trained agents</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Customer Calling Support -->
+
+  </div>
+
+  <!-- HOW WE WORK -->
+  <section style="background:var(--bg-dark-2);position:relative">
+    <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(217,32,32,.2),transparent)"></div>
+    <div class="section">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center" class="grid-2">
+        <div>
+          <div class="sr"><span class="section-tag">Our Process</span><h2 class="section-title" style="margin:16px 0 40px">How We Work<br>With You</h2></div>
+          <div style="display:flex;flex-direction:column;gap:30px">
+            <div class="process-step sr delay-1"><div class="process-num">01</div><div><h4 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:6px">Free Consultation</h4><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">We understand your life stage, income, dependents, and specific risks. No pressure, no jargon.</p></div></div>
+            <div class="process-step sr delay-2"><div class="process-num">02</div><div><h4 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:6px">Policy Comparison</h4><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">We compare plans across 15+ top insurers and present options with clear pros, cons, and premiums.</p></div></div>
+            <div class="process-step sr delay-3"><div class="process-num">03</div><div><h4 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:6px">Hassle-Free Purchase</h4><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">We handle all paperwork, KYC, and onboarding so your policy is active within hours.</p></div></div>
+            <div class="process-step sr delay-4"><div class="process-num">04</div><div><h4 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:6px">Lifetime Claim Support</h4><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">When you need to claim, we're your advocate — filing, tracking, and pushing for settlement.</p></div></div>
+          </div>
+        </div>
+        <div class="sr-r" style="position:relative">
+          <div class="section-img-panel" style="aspect-ratio:3/4">
+            <div class="img-frame"></div>
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=85&auto=format" alt="a3outsourcing team" loading="lazy">
+            <div class="img-overlay" style="background:linear-gradient(to top,rgba(244,244,245,0.5) 0%,transparent 40%)"></div>
+          </div>
+          <div class="float-card glass-card" style="position:absolute;top:-18px;right:-18px;padding:16px 22px;border-radius:16px;min-width:155px;z-index:3"><div style="font-size:28px;font-weight:800;font-family:var(--font-mono);color:#2ec4b6">99%</div><div style="font-size:12px;color:var(--text-secondary);margin-top:2px">Client Retention</div></div>
+          <div class="float-card-delay glass-card" style="position:absolute;bottom:-18px;left:-18px;padding:16px 22px;border-radius:16px;min-width:155px;z-index:3"><div style="font-size:28px;font-weight:800;font-family:var(--font-mono);color:#d4a017">24hr</div><div style="font-size:12px;color:var(--text-secondary);margin-top:2px">Claim Response</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section>
+    <div class="section">
+      <div class="sr" style="text-align:center;margin-bottom:56px">
+        <span class="section-tag">Why a3outsourcing</span>
+        <h2 class="section-title">What Makes Us Different</h2>
+        <p class="section-sub centered">We don't just sell insurance — we build relationships that protect your future at every stage of life.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:56px" class="grid-3">
+        <!-- <div class="why-card sr delay-1"><div class="icon-box icon-glow-cycle" style="width:54px;height:54px;background:rgba(217,32,32,.08);border:1px solid rgba(217,32,32,.18);color:#D92020;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:10px">IRDAI Registered</h3><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">Fully licensed and regulated. Your trust is protected by law and our 17-year track record.</p></div> -->
+        <div class="why-card sr delay-2"><div class="icon-box icon-glow-cycle" style="width:54px;height:54px;background:rgba(78,205,196,.08);border:1px solid rgba(78,205,196,.18);color:#2ec4b6;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:10px">Unbiased Advice</h3><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">We work for you, not the insurers. Recommendations based purely on your needs and budget.</p></div>
+        <div class="why-card sr delay-3"><div class="icon-box icon-glow-cycle" style="width:54px;height:54px;background:rgba(212,160,23,.08);border:1px solid rgba(212,160,23,.18);color:#d4a017;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:10px">Dedicated Manager</h3><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">Every client gets a dedicated relationship manager who knows your policy inside-out.</p></div>
+        <div class="why-card sr delay-1"><div class="icon-box icon-glow-cycle" style="width:54px;height:54px;background:rgba(155,89,182,.08);border:1px solid rgba(155,89,182,.18);color:#9b59b6;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:10px">Lightning-Fast Claims</h3><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">Our claims team responds within 24 hours and follows up daily until settlement is complete.</p></div>
+        <div class="why-card sr delay-2"><div class="icon-box icon-glow-cycle" style="width:54px;height:54px;background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.18);color:#27ae60;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:10px">Pan Tamil Nadu Reach</h3><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">Serving Chennai, Coimbatore, Madurai, Salem and beyond — in-person and online.</p></div>
+        <div class="why-card sr delay-3"><div class="icon-box icon-glow-cycle" style="width:54px;height:54px;background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.18);color:#3a6fd8;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h3 style="font-size:17px;font-weight:700;font-family:var(--font-display);margin-bottom:10px">15+ Insurer Partners</h3><p style="color:var(--text-secondary);font-size:14px;line-height:1.7">LIC, HDFC, ICICI, Star Health, Bajaj, Tata, and 9 more — all under one roof.</p></div>
+      </div>
+
+      <!-- Testimonial pull-quote -->
+      <div class="sr" style="background:linear-gradient(135deg,rgba(217,32,32,.04),rgba(78,205,196,.03));border:1px solid rgba(0,0,0,.07);border-radius:20px;padding:40px;display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="rgba(217,32,32,0.10)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <div style="flex:1;min-width:220px">
+          <p style="font-size:18px;line-height:1.8;font-style:italic;margin-bottom:18px;color:var(--text-primary)">"After a motor accident, their team handled everything — paperwork, hospital coordination, claim filing. I could focus entirely on recovery. Settled in 9 days."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#D92020,#E8603A);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:16px">M</div>
+            <div><div style="font-weight:700;font-size:15px">Meera Nair</div><div style="color:var(--text-secondary);font-size:13px">Healthcare Professional, Chennai</div></div>
+            <div style="margin-left:auto;display:flex;gap:2px;color:#d4a017;font-size:14px">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section style="background:var(--bg-dark-2)">
+    <div class="section" style="text-align:center;padding-bottom:72px">
+      <div class="sr" style="margin-bottom:40px">
+        <span class="section-tag">Trusted Network</span>
+        <h2 class="section-title">Our Insurance Partners</h2>
+        <p class="section-sub centered">Access to India's top 15+ insurers — for the best rates and broadest coverage.</p>
+      </div>
+      <div class="marquee-wrap">
+        <div class="marquee-fade-l"></div><div class="marquee-fade-r"></div>
+        <div class="marquee-track">
+          <!-- <div class="partner-card a3-card"><img class="a3-logo sm" src="assets/logos/a3outsourcing.png" alt="a3"><span style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--brand-red)">a3outsourcing</span></div> -->
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/LIC.png" alt="LIC"><span class="partner-name">LIC</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/hdfc.png" alt="HDFC"><span class="partner-name">HDFC Life</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/icici.png" alt="ICICI"><span class="partner-name">ICICI Prudential</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/SBI.png" alt="SBI"><span class="partner-name">SBI Life</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/STARHEALTH.png" alt="Star"><span class="partner-name">Star Health</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/bajaj.png" alt="Bajaj"><span class="partner-name">Bajaj Allianz</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/tata.png" alt="Tata"><span class="partner-name">Tata AIA</span></div>
+          <!-- <div class="partner-card a3-card"><img class="a3-logo sm" src="assets/logos/a3outsourcing.png" alt="a3"><span style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--brand-red)">a3outsourcing</span></div> -->
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/LIC.png" alt="LIC"><span class="partner-name">LIC</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/hdfc.png" alt="HDFC"><span class="partner-name">HDFC Life</span></div>
+          <div class="partner-card"><img class="partner-logo-mark" src="assets/logos/icici.png" alt="ICICI"><span class="partner-name">ICICI Prudential</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1400&q=70&auto=format" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.06"><div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(244,244,245,0.94),rgba(236,236,237,0.90))"></div></div>
+    <div class="section" style="text-align:center;position:relative;z-index:2">
+      <div class="sr">
+        <span class="section-tag">Take Action</span>
+        <h2 style="font-size:clamp(28px,4.5vw,48px);font-weight:800;font-family:var(--font-display);margin:16px 0 18px;letter-spacing:-2px;background:linear-gradient(160deg,#2a2a2e 10%,#666668 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Not sure which policy fits?<br>Let us figure it out.</h2>
+        <p style="color:var(--text-secondary);font-size:17px;margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.75">Free consultation. No obligation. Our experts have guided 50,000+ clients.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+          <a href="contact.html" class="btn-primary" style="font-size:17px;padding:18px 52px">Talk to an Expert &rarr;</a>
+          <a href="tel:8939635733" class="btn-secondary" style="font-size:17px;padding:18px 40px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72A12.84 12.84 0 0 0 10.22 6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<div id="footer-root"></div>
+<button class="scroll-top-btn" id="scroll-top" aria-label="Scroll to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>injectLayout('services');</script>
+</body>
+</html>
