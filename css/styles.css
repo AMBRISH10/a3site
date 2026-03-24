@@ -1083,25 +1083,22 @@ img.a3-logo {
 
   /* Grid collapses */
   .grid-2 {
+    grid-template-columns: 1fr !important;
     gap: 24px !important;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
   }
 
   .grid-3 {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
   }
-
-  .grid-4 {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 14px !important;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 56px 16px;
+  .footer-cols {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
 
   /* Hero */

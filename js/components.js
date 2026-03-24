@@ -98,7 +98,7 @@ function getFooter() {
     <div class="footer-grid-bg"></div>
 
     <div style="max-width:1200px;margin:0 auto;padding:76px 24px 44px;position:relative;z-index:1">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:52px">
+      <div class="footer-cols" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:52px">
 
         <!-- Brand col -->
         <div>
