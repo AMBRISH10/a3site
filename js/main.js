@@ -80,7 +80,7 @@ function initParticles() {
   const pts = Array.from({ length: 40 }, () => ({
     x: Math.random() * c.width, y: Math.random() * c.height,
     vx: (Math.random() - 0.5) * 0.22, vy: (Math.random() - 0.5) * 0.22,
-    s: Math.random() * 1.6 + 0.4, o: Math.random() * 0.5 + 0.3
+    s: Math.random() * 1.6 + 0.4, o: Math.random() * 0.8 + 0.5
   }));
 
   function draw() {
